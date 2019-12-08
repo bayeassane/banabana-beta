@@ -8,6 +8,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ArticlesComponent } from './components/articles/articles.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { LoumasComponent } from './components/loumas/loumas.component';
+import { ArticleService } from './services/article.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -20,9 +23,12 @@ import { LoumasComponent } from './components/loumas/loumas.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ArticleService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
